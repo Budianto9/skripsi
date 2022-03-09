@@ -13,16 +13,11 @@
             android:name=".account.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".account.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".account.LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Skripsi.NoActionBar">
+            android:theme="@style/Theme.Skripsi.NoActionBar"/>
+        <activity
+            android:name=".account.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

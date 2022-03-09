@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/IT24/AndroidStudioProjects/skripsi/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
+        <entry key="..\:/Users/IT24/AndroidStudioProjects/skripsi/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/IT24/AndroidStudioProjects/skripsi/app/src/main/res/layout/activity_main2.xml" value="0.1796875" />
+        <entry key="..\:/Users/IT24/AndroidStudioProjects/skripsi/app/src/main/res/layout/activity_register.xml" value="0.1796875" />
         <entry key="..\:/Users/IT24/AndroidStudioProjects/skripsi/app/src/main/res/layout/content_main.xml" value="0.1796875" />
       </map>
     </option>
