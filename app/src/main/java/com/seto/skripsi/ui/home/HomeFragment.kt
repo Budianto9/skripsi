@@ -35,6 +35,10 @@ class HomeFragment : Fragment() {
         return root
     }
 
+
+
+    //test coment command
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
