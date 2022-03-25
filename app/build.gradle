@@ -6,6 +6,8 @@ plugins {
     id 'kotlin-kapt'
 }
 
+apply from: '../shared_dependencies.gradle'
+
 android {
     compileSdk 32
 
@@ -58,39 +60,8 @@ dependencies {
     //Timber for simple logging
     implementation 'com.jakewharton.timber:timber:5.0.1'
 
-    implementation "androidx.room:room-runtime:2.4.2"
-    kapt "androidx.room:room-compiler:2.4.2"
-    androidTestImplementation "androidx.room:room-testing:2.4.2"
-    implementation "androidx.room:room-ktx:2.4.2"
-
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
-    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.5"
-    api "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
-
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-native-mt"
 
     implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation "com.github.bumptech.glide:glide:4.13.1"
-
-
-    // Koin main features for Android
-    implementation "io.insert-koin:koin-android:3.2.0-beta-1"
-// No more koin-android-viewmodel, koin-android-scope, koin-android-fragment
-    // Koin Core features
-    implementation "io.insert-koin:koin-core:3.2.0-beta-1"
-// Koin Test features
-    testImplementation "io.insert-koin:koin-test:3.2.0-beta-1"
-
-// Java Compatibility
-    implementation "io.insert-koin:koin-android-compat:3.2.0-beta-1"
-// Jetpack WorkManager
-    implementation "io.insert-koin:koin-androidx-workmanager:3.2.0-beta-1"
-// Navigation Graph
-    implementation "io.insert-koin:koin-androidx-navigation:3.2.0-beta-1"
-// Jetpack Compose
-    implementation "io.insert-koin:koin-androidx-compose:3.2.0-beta-1"
-
 }
