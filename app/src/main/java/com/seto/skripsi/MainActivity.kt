@@ -58,10 +58,19 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    /**
+     * fungsi ini dibuat agar memerintahkan user untuk menekan 2kali jika aplikasi ingin segera di tutup
+     * jika user menekan back stack hanya sekali dalam waktu 2 detik, maka fungsi ini akan kembali ketitik awal.
+     * arti nya user wajib menekan back stack 2 kali dalam waktu 2 detik
+     */
     private var doubleBackToExitPressedOnce = false
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed()
+            val closeApp = Intent(Intent.ACTION_MAIN)
+            closeApp.addCategory(Intent.CATEGORY_HOME)
+            closeApp.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(closeApp)
             return
         }
 

@@ -3,6 +3,8 @@ package com.seto.skripsi.account
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.FirebaseApp
@@ -33,6 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (auth.currentUser != null){
             val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
         }
     }
@@ -62,6 +65,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful){
                     binding.progressBar.visibility = View.GONE
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     startActivity(intent)
                     Toast.makeText(this, "Berhasil login", Toast.LENGTH_SHORT).show()
                 } else if(auth.currentUser == null){
@@ -74,5 +78,28 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Login gagal, Mohon untuk dicoba kembali nanti", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+
+    /**
+     * fungsi ini dibuat agar memerintahkan user untuk menekan 2kali jika aplikasi ingin segera di tutup
+     * jika user menekan back stack hanya sekali dalam waktu 2 detik, maka fungsi ini akan kembali ketitik awal.
+     * arti nya user wajib menekan back stack 2 kali dalam waktu 2 detik
+     */
+    private var doubleBackToExitPressedOnce = false
+    override fun onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            val closeApp = Intent(Intent.ACTION_MAIN)
+            closeApp.addCategory(Intent.CATEGORY_HOME)
+            closeApp.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(closeApp)
+            return
+        }
+
+        this.doubleBackToExitPressedOnce = true
+        Toast.makeText(this, "Tekan sekali lagi untuk keluar", Toast.LENGTH_SHORT).show()
+
+        Handler(Looper.myLooper()!!).postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
     }
 }
