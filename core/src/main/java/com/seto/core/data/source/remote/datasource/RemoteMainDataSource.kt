@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
-class RemoteSurahDataSource(private val apiService: ApiService){
+class RemoteMainDataSource(private val apiService: ApiService){
 
     suspend fun getAllSurah(): Flow<ApiResponse<List<SurahResponse>>>{
         return flow {

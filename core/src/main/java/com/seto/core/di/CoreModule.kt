@@ -1,10 +1,11 @@
 package com.seto.core.di
 
+import com.seto.core.data.MainRepository
+import com.seto.core.data.source.remote.datasource.RemoteMainDataSource
 import com.seto.core.data.source.remote.network.ApiService
-import okhttp3.CertificatePinner
+import com.seto.core.domain.repository.IMainRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.koin.core.context.GlobalContext.get
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -27,4 +28,9 @@ val networkModule = module {
             .build()
         retrofit.create(ApiService::class.java)
     }
+}
+
+val repositoryModule = module {
+    single { RemoteMainDataSource(get()) }
+    single<IMainRepository> { MainRepository(get()) }
 }
