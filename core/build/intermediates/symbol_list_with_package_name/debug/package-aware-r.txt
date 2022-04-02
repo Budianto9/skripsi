@@ -1,3 +1,2 @@
 com.seto.core
 layout layout
-layout list_item

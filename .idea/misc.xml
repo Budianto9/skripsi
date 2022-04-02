@@ -15,12 +15,13 @@
         <entry key="..\:/Users/SETO NURCAHYO/StudioProjects/skripsi/app/src/main/res/layout/content_main.xml" value="0.1796875" />
         <entry key="..\:/Users/SETO NURCAHYO/StudioProjects/skripsi/app/src/main/res/layout/nav_header_main.xml" value="0.1796875" />
         <entry key="..\:/Users/SETO NURCAHYO/StudioProjects/skripsi/app/src/main/res/menu/main.xml" value="0.1796875" />
-        <entry key="..\:/skripsi/app/src/main/res/layout/list_item.xml" value="0.1796875" />
         <entry key="..\:/skripsi/core/src/main/res/layout/layout.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
