@@ -1,9 +1,9 @@
-package com.seto.skripsi.ui.home
+package com.seto.skripsi.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.seto.core.domain.usecase.MainUseCase
 
-class HomeViewModel(private val mainUseCase: MainUseCase) : ViewModel() {
+class SurahViewModel(private val mainUseCase: MainUseCase) : ViewModel() {
     val surah = mainUseCase.getAllSurah().asLiveData()
 }
