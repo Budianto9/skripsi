@@ -8,7 +8,18 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+
+    <string name="kelas_1">Kelas 1</string>
+    <string name="kelas_2">Kelas 2</string>
+    <string name="kelas_3">Kelas 3</string>
+    <string name="kelas_4">Kelas 4</string>
+    <string name="kelas_5">Kelas 5</string>
+    <string name="kelas_6">Kelas 6</string>
+
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="terjadi_kesalahan_silahkan_dicoba_kembali">Terjadi kesalahan, Silahkan dicoba kembali</string>
+    <string name="name_of_surah">Nama Surah :</string>
+    <string name="number_of_ayah">Ayat :</string>
+    <string name="place">Tempat :</string>
 </resources>

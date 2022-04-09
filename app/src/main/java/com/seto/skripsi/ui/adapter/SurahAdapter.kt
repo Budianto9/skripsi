@@ -1,4 +1,4 @@
-package com.seto.skripsi.ui.home
+package com.seto.skripsi.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.seto.core.data.source.remote.response.SurahResponse
 import com.seto.skripsi.databinding.ListItemBinding
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+class SurahAdapter : RecyclerView.Adapter<SurahAdapter.HomeViewHolder>() {
 
     private val listSurahResponse = mutableListOf<SurahResponse>()
 
@@ -32,7 +32,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
         fun bindTo(item: SurahResponse){
 
             binding.tvTitle.text = item.name
-            binding.tvPlace.text = item.place
+            binding.tvNumberOfAyah.text = item.numberOfAyah.toString()
             binding.tvType.text = item.type
         }
     }

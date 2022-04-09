@@ -16,8 +16,15 @@
         <entry key="..\:/Users/SETO NURCAHYO/StudioProjects/skripsi/app/src/main/res/layout/nav_header_main.xml" value="0.1796875" />
         <entry key="..\:/Users/SETO NURCAHYO/StudioProjects/skripsi/app/src/main/res/menu/main.xml" value="0.1796875" />
         <entry key="..\:/skripsi/core/src/main/res/layout/layout.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.115625" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/list_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_kelas1.xml" value="0.12158054711246201" />
+        <entry key="app/src/main/res/layout/fragment_kelas3.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.45824847250509165" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
       </map>
     </option>
   </component>
