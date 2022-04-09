@@ -1,4 +1,4 @@
-package com.seto.skripsi.ui.home
+package com.seto.skripsi.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,18 +7,21 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.seto.core.data.Resource
-import com.seto.skripsi.databinding.FragmentHomeBinding
+import com.seto.skripsi.databinding.FragmentKelas3Binding
+import com.seto.skripsi.ui.adapter.SurahAdapter
+import com.seto.skripsi.ui.viewmodel.SurahViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import timber.log.Timber
 
-class HomeFragment : Fragment() {
+class Kelas3Fragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentKelas3Binding? = null
+    private val viewModel: SurahViewModel by viewModel()
+    private lateinit var surahAdapter: SurahAdapter
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private val viewModel: HomeViewModel by viewModel()
-    private lateinit var homeAdapter: HomeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,11 +29,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentKelas3Binding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,12 +43,13 @@ class HomeFragment : Fragment() {
         initObserve()
     }
 
+
     private fun initUi(){
-        homeAdapter = HomeAdapter()
+        surahAdapter = SurahAdapter()
         val linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.rvSurah.layoutManager = linearLayoutManager
         binding.rvSurah.setHasFixedSize(true)
-        binding.rvSurah.adapter = homeAdapter
+        binding.rvSurah.adapter = surahAdapter
     }
 
     private fun initObserve(){
@@ -56,7 +61,8 @@ class HomeFragment : Fragment() {
                     }
                     is Resource.Success ->{
                         binding.progressBar.visibility = View.GONE
-                        homeAdapter.setData(surah.data)
+                        surahAdapter.setData(surah.data?.slice(20..29))
+                        Timber.e("Panjang list nya : ${surah.data?.size}")
                     }
                     is Resource.Error ->{
                         binding.tvError.visibility = View.VISIBLE
