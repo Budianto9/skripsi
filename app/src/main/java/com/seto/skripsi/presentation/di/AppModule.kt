@@ -1,8 +1,8 @@
-package com.seto.skripsi.di
+package com.seto.skripsi.presentation.di
 
 import com.seto.core.domain.usecase.MainInteractor
 import com.seto.core.domain.usecase.MainUseCase
-import com.seto.skripsi.ui.viewmodel.SurahViewModel
+import com.seto.skripsi.presentation.ui.viewmodel.SurahViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

@@ -1,4 +1,4 @@
-package com.seto.skripsi.ui.viewmodel
+package com.seto.skripsi.presentation.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

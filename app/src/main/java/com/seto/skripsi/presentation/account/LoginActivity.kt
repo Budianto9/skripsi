@@ -1,4 +1,4 @@
-package com.seto.skripsi.account
+package com.seto.skripsi.presentation.account
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,12 +7,10 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.Toast
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.seto.skripsi.MainActivity
-import com.seto.skripsi.R
+import com.seto.skripsi.presentation.MainActivity
 import com.seto.skripsi.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

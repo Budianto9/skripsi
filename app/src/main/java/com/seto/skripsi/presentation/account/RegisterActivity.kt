@@ -1,4 +1,4 @@
-package com.seto.skripsi.account
+package com.seto.skripsi.presentation.account
 
 import android.content.ContentValues.TAG
 import android.content.Intent

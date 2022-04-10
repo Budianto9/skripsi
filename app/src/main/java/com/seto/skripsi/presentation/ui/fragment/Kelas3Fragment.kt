@@ -1,4 +1,4 @@
-package com.seto.skripsi.ui.fragment
+package com.seto.skripsi.presentation.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.seto.core.data.Resource
 import com.seto.skripsi.databinding.FragmentKelas3Binding
-import com.seto.skripsi.ui.adapter.SurahAdapter
-import com.seto.skripsi.ui.viewmodel.SurahViewModel
+import com.seto.skripsi.presentation.ui.adapter.SurahAdapter
+import com.seto.skripsi.presentation.ui.viewmodel.SurahViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber
 

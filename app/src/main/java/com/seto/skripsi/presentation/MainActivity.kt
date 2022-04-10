@@ -1,4 +1,4 @@
-package com.seto.skripsi
+package com.seto.skripsi.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -18,7 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.seto.skripsi.account.LoginActivity
+import com.seto.skripsi.R
+import com.seto.skripsi.presentation.account.LoginActivity
 import com.seto.skripsi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -47,14 +48,12 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-
         auth = Firebase.auth
     }
 
 
     /**
-     * fungsi ini dibuat agar memerintahkan user untuk menekan 2kali jika aplikasi ingin segera di tutup
+     * fungsi ini dibuat agar memerintahkan user untuk menekan button backstack 2kali, jika aplikasi ingin segera di tutup.
      * jika user menekan back stack hanya sekali dalam waktu 2 detik, maka fungsi ini akan kembali ketitik awal.
      * arti nya user wajib menekan back stack 2 kali dalam waktu 2 detik
      */

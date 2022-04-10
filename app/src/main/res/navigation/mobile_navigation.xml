@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_kelas1"
-        android:name="com.seto.skripsi.ui.fragment.Kelas1Fragment"
+        android:name="com.seto.skripsi.presentation.ui.fragment.Kelas1Fragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_kelas1" />
 
     <fragment
         android:id="@+id/nav_kelas2"
-        android:name="com.seto.skripsi.ui.fragment.Kelas2Fragment"
+        android:name="com.seto.skripsi.presentation.ui.fragment.Kelas2Fragment"
         android:label="@string/kelas_2"
         tools:layout="@layout/fragment_kelas2" />
 
     <fragment
         android:id="@+id/nav_kelas3"
-        android:name="com.seto.skripsi.ui.fragment.Kelas3Fragment"
+        android:name="com.seto.skripsi.presentation.ui.fragment.Kelas3Fragment"
         android:label="@string/kelas_3"
         tools:layout="@layout/fragment_kelas3" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.seto.skripsi.ui.adapter
+package com.seto.skripsi.presentation.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
