@@ -62,7 +62,6 @@ class Kelas3Fragment : Fragment() {
                     is Resource.Success ->{
                         binding.progressBar.visibility = View.GONE
                         surahAdapter.setData(surah.data?.slice(20..29))
-                        Timber.e("Panjang list nya : ${surah.data?.size}")
                     }
                     is Resource.Error ->{
                         binding.tvError.visibility = View.VISIBLE

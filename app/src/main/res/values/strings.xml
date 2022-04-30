@@ -22,4 +22,6 @@
     <string name="name_of_surah">Nama Surah :</string>
     <string name="number_of_ayah">Ayat :</string>
     <string name="place">Tempat :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

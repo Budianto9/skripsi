@@ -1,20 +1,19 @@
 package com.seto.skripsi.presentation.ui.fragment
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.seto.core.data.Resource
-import com.seto.skripsi.databinding.FragmentKelas2Binding
+import com.seto.skripsi.databinding.FragmentKelas6Binding
 import com.seto.skripsi.presentation.ui.adapter.SurahAdapter
 import com.seto.skripsi.presentation.ui.viewmodel.SurahViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class Kelas2Fragment : Fragment() {
-
-    private var _binding: FragmentKelas2Binding? = null
+class Kelas6Fragment : Fragment() {
+    private var _binding: FragmentKelas6Binding? = null
     private val viewModel: SurahViewModel by viewModel()
     private lateinit var surahAdapter: SurahAdapter
 
@@ -23,17 +22,15 @@ class Kelas2Fragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-
-        _binding = FragmentKelas2Binding.inflate(inflater, container, false)
+    ): View? {
+        // Inflate the layout for this fragment
+        _binding = FragmentKelas6Binding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -41,6 +38,7 @@ class Kelas2Fragment : Fragment() {
         initUi()
         initObserve()
     }
+
 
     private fun initUi(){
         surahAdapter = SurahAdapter()
@@ -59,7 +57,7 @@ class Kelas2Fragment : Fragment() {
                     }
                     is Resource.Success ->{
                         binding.progressBar.visibility = View.GONE
-                        surahAdapter.setData(surah.data?.slice(10..19))
+                        surahAdapter.setData(surah.data?.slice(50..59))
                     }
                     is Resource.Error ->{
                         binding.tvError.visibility = View.VISIBLE

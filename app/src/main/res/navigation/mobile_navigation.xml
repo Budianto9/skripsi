@@ -22,4 +22,22 @@
         android:name="com.seto.skripsi.presentation.ui.fragment.Kelas3Fragment"
         android:label="@string/kelas_3"
         tools:layout="@layout/fragment_kelas3" />
+
+    <fragment
+        android:id="@+id/nav_kelas4"
+        android:name="com.seto.skripsi.presentation.ui.fragment.Kelas4Fragment"
+        android:label="@string/kelas_4"
+        tools:layout="@layout/fragment_kelas4" />
+
+    <fragment
+        android:id="@+id/nav_kelas5"
+        android:name="com.seto.skripsi.presentation.ui.fragment.Kelas5Fragment"
+        android:label="@string/kelas_5"
+        tools:layout="@layout/fragment_kelas5" />
+
+    <fragment
+        android:id="@+id/nav_kelas6"
+        android:name="com.seto.skripsi.presentation.ui.fragment.Kelas6Fragment"
+        android:label="@string/kelas_6"
+        tools:layout="@layout/fragment_kelas6" />
 </navigation>
